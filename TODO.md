@@ -13,7 +13,7 @@
   - [X] Secure passwords with bcrypt
 - [ ] Create "Join the Club" page with secret passcode
   - [ ] Update user's membership status upon correct passcode entry
-- [ ] Create login form using Passport.js
+- [X] Create login form using Passport.js
 
 ## Message Creation and Display
 

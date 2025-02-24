@@ -15,3 +15,8 @@ export const getUserById = async (id) => {
   const result = await db.query('SELECT * FROM users WHERE id = $1', [id])
   return result.rows[0]
 }
+
+export const setUserAsMember = async (userId) => {
+  return db.query('UPDATE users SET member = TRUE WHERE id = $1', [userId])
+}
+

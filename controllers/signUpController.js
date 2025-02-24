@@ -7,8 +7,7 @@ export const getSignUp = (req, res) => {
 export const postSignUp = async (req, res) => {
     const { username, password } = req.body
     try {
-        const user = await createUser(username, password)
-        console.log(user)
+        await createUser(username, password)
     } catch (err) {
         console.error(err)
         next(err)
