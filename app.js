@@ -6,8 +6,10 @@ import { fileURLToPath } from 'url'
 import router from './routes/index.js'
 import connection from './db/pool.js'
 import passport from 'passport'
+import passportConfig from './config/passport.js'
 
 const PgStore = connectPgSimple(session)
+
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
