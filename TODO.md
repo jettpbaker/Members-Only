@@ -8,10 +8,9 @@
 
 ## User Authentication
 
-- [ ] Create sign-up form (fullname, username/email, password, confirmPassword)
-  - [ ] Sanitize and validate form fields
-  - [ ] Secure passwords with bcrypt
-  - [ ] Implement custom validator for confirmPassword
+- [X] Create sign-up form (fullname, username/email, password, confirmPassword)
+  - [X] Sanitize and validate form fields
+  - [X] Secure passwords with bcrypt
 - [ ] Create "Join the Club" page with secret passcode
   - [ ] Update user's membership status upon correct passcode entry
 - [ ] Create login form using Passport.js
