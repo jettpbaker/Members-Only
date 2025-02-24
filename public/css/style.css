@@ -7,12 +7,14 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+
+    background-color: #181818;
+    padding: 2.5rem 2rem;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+.content-container {
+
+  
 }
 
 footer {

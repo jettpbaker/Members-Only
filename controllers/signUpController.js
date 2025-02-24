@@ -1,7 +1,8 @@
 import { createUser } from '../db/queries.js'
 
 export const getSignUp = (req, res) => {
-    res.render('sign-up')
+    const isAuthenticated = req.isAuthenticated()
+    res.render('sign-up', {isAuthenticated})
 } 
 
 export const postSignUp = async (req, res) => {

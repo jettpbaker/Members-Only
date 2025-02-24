@@ -10,17 +10,13 @@ import passportConfig from './config/passport.js'
 
 const PgStore = connectPgSimple(session)
 
-
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const app = express()
 
-// View engine setup 
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
-
-// Middleware
 
 const sessionStore = new PgStore({
   pool: connection,
@@ -43,7 +39,6 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
-// Routes
 app.use('/', router) 
 
 const port = process.env.PORT || 3000
