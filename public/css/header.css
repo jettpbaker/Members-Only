@@ -1,0 +1,24 @@
+header {
+    background: #181818;
+    
+    padding: 2.5rem 2rem;
+    border-bottom: 1px solid #ffffff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0rem 1rem;
+}
+
+hr {
+    margin-top: 1rem;
+    color: #83d6ae83;
+}

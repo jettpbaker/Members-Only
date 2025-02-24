@@ -1,0 +1,21 @@
+<head>
+    <link rel="stylesheet" href="/css/header.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <section class="nav-section-left">
+                <a href="/">Home</a>
+            </section>
+            <section class="nav-section-right">
+                <% if (isAuthenticated) { %>
+                    <a href="/member">Member</a>
+                    <a href="/logout">Logout</a>
+                <% } else { %>
+                    <a href="/login">Login</a>
+                <% } %>
+            </section>
+        </nav>
+    <hr>
+    </header>
+</body>
