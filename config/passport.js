@@ -11,8 +11,6 @@ passport.use(new LocalStrategy(async (username, password, done) => {
       return done(null, false, {message: 'Incorrect username.'})
     }
 
-    console.log('Password from form:', password)
-    console.log('Hashed password from DB:', user ? user.password : 'User is null')
     const validPassword = await bcrypt.compare(password, user.password)
 
     if (!validPassword) {
