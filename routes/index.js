@@ -9,7 +9,7 @@ const router = express.Router()
 router.get('/', getHome)
 
 router.post('/new-message', newMessage)
-router.post('/message/delete/:id', deleteMessage)
+router.post('/delete-message/:id', deleteMessage)
 
 router.use('/auth', authRoutes)
 router.use('/member', memberRoutes)
