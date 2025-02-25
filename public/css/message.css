@@ -25,3 +25,10 @@
 .message p {
     margin-bottom: 0.3rem;
 }
+
+.become-member-message {
+    /* font-size: 0.8rem; */
+    font-weight: normal;
+    font-style: italic;
+    color: rgba(128, 128, 128, 0.6);
+}
