@@ -2,6 +2,6 @@
 
 <section class="message-view">
     <% messages.forEach(message => { %> 
-        <%- include('../components/message', { message, isMember }) %>
+        <%- include('../components/message', { message, isMember, isAdmin }) %>
     <% }) %>
 </section>
