@@ -4,9 +4,13 @@
 
 <link rel="stylesheet" href="/css/message.css">
 <section class="message">
-    <div class="message-header">
-        <h3><%= message.username %></h3>
-        <p class="timestamp" data-timestamp="<%= message.posted %>"></p>
+    <div class="message-header">     
+        <% if (isMember) { %>
+            <h3><%= message.username %></h3>
+            <p class="timestamp" data-timestamp="<%= message.posted %>"></p>
+       <% } else { %>
+        <h3 class="become-member-message">Become a member to see message author and timestamp</h3>
+        <% } %>
     </div>
     <p><%= message.message %></p>
 </section>

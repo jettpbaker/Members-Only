@@ -1,10 +1,12 @@
 import { getMessages } from '../db/queries.js'
 
 export const getHome = async (req, res) => {
-    const messages = await getMessages()
     const isAuthenticated = req.isAuthenticated()
+    const isMember = req.user.member
+    const messages = await getMessages()
     res.render('home', {
         isAuthenticated,
+        isMember,
         messages
     })
 } 
