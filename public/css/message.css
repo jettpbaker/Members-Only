@@ -1,8 +1,15 @@
 .message {
-    width: 100%;
     border: 1px solid rgba(131, 179, 119, 0.6);
     border-radius: 4px;
-    padding: 1rem;
+    padding: 1rem;  
+    width: 100%;
+}
+
+/* Media query for desktop screens */
+@media screen and (min-width: 768px) {
+    .message {
+        width: 100%; /* Will inherit container width which is 70% on desktop */
+    }
 }
 
 .message-header {
@@ -20,10 +27,6 @@
     font-size: 0.8rem;
     font-style: italic;
     color: rgba(128, 128, 128, 0.6);
-}
-
-.message p {
-    margin-bottom: 1rem;
 }
 
 .become-member-message {
@@ -44,6 +47,7 @@
     fill: rgba(128, 128, 128, 0.7);
     width: 1rem;
     height: auto;
+    margin-top: 1rem;
 
     transition: fill ease 0.3s;
 }
