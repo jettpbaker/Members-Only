@@ -9,7 +9,6 @@ export const newMessage = async (req, res) => {
 
 export const deleteMessage = async (req, res) => {
     const id  = req.params.id
-    console.log(id)
     await deleteMessageFromDB(id)
     res.redirect('/')
 }
