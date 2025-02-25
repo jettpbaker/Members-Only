@@ -12,5 +12,5 @@ export const postSignUp = async (req, res) => {
         console.error(err)
         next(err)
     }
-    res.redirect('/login')
+    res.redirect('/auth/login')
 } 
