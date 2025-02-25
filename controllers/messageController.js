@@ -1,9 +1,15 @@
-import { createMessage } from '../db/queries.js'
+import { createMessage, deleteMessage as deleteMessageFromDB } from '../db/queries.js'
 
 export const newMessage = async (req, res) => {
-    console.log(req.body)
     const { message } = req.body
     const userId = req.user.id
     await createMessage(userId, message)
+    res.redirect('/')
+}
+
+export const deleteMessage = async (req, res) => {
+    const id  = req.params.id
+    console.log(id)
+    await deleteMessageFromDB(id)
     res.redirect('/')
 }

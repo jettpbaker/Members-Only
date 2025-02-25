@@ -33,3 +33,7 @@ export const getMessages = async () => {
   `)
   return result.rows
 } 
+
+export const deleteMessage = async (id) => {
+  return db.query('DELETE FROM messages WHERE id = $1', [id])
+}

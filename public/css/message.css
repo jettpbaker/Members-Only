@@ -1,8 +1,15 @@
 .message {
-    width: 100%;
     border: 1px solid rgba(131, 179, 119, 0.6);
     border-radius: 4px;
-    padding: 1rem;
+    padding: 1rem;  
+    width: 100%;
+}
+
+/* Media query for desktop screens */
+@media screen and (min-width: 768px) {
+    .message {
+        width: 100%; /* Will inherit container width which is 70% on desktop */
+    }
 }
 
 .message-header {
@@ -22,13 +29,31 @@
     color: rgba(128, 128, 128, 0.6);
 }
 
-.message p {
-    margin-bottom: 0.3rem;
-}
-
 .become-member-message {
     /* font-size: 0.8rem; */
     font-weight: normal;
     font-style: italic;
     color: rgba(128, 128, 128, 0.6);
+}
+
+.delete-message {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.delete-message svg {
+    fill: rgba(128, 128, 128, 0.7);
+    width: 1rem;
+    height: auto;
+    margin-top: 1rem;
+
+    transition: fill ease 0.3s;
+}
+
+.delete-message svg:hover {
+    fill: #c294dce2;
+    width: 1rem;
+    height: auto;
 }
