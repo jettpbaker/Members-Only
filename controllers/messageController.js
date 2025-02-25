@@ -1,4 +1,4 @@
-import { createMessage, deleteMessage as deleteMessageFromDb } from '../db/queries.js'
+import { createMessage, deleteMessage as deleteMessageFromDB } from '../db/queries.js'
 
 export const newMessage = async (req, res) => {
     const { message } = req.body
@@ -9,6 +9,6 @@ export const newMessage = async (req, res) => {
 
 export const deleteMessage = async (req, res) => {
     const id = req.params.id
-    await deleteMessageFromDb(id)
+    await deleteMessageFromDB(id)
     res.redirect('/')
 }
