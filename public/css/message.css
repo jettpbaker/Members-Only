@@ -47,7 +47,6 @@
     fill: rgba(128, 128, 128, 0.7);
     width: 1rem;
     height: auto;
-    margin-top: 1rem;
 }
 
 .delete-message svg:hover {
