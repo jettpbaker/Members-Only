@@ -20,3 +20,7 @@ export const setUserAsMember = async (userId) => {
   return db.query('UPDATE users SET member = TRUE WHERE id = $1', [userId])
 }
 
+export const createMessage = async (userId, message) => {
+  return db.query('INSERT INTO messages (user_id, message) VALUES ($1, $2)', [userId, message])
+}
+
