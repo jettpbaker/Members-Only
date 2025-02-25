@@ -15,15 +15,17 @@
     document.addEventListener('DOMContentLoaded', () => {
         dayjs.extend(window.dayjs_plugin_relativeTime)
 
-        const element = document.querySelector('.timestamp')
-        const timestamp = element.getAttribute('data-timestamp')
-        let text = dayjs(timestamp).fromNow()
+        const timestampElements = document.querySelectorAll('.timestamp')
+        timestampElements.forEach(element => {
+            const timestamp = element.getAttribute('data-timestamp')
+            let text = dayjs(timestamp).fromNow()
+            
+            // Check if the first character is a letter and capitalize if needed
+            if (/^[a-zA-Z]/.test(text)) {
+                text = text.charAt(0).toUpperCase() + text.slice(1)
+            }
         
-        // Check if the first character is a letter and capitalize if needed
-        if (/^[a-zA-Z]/.test(text)) {
-            text = text.charAt(0).toUpperCase() + text.slice(1)
-        }
-    
-        element.textContent = text
+            element.textContent = text
+        })
     })
 </script>
