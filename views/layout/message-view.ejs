@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="/css/message-view.css">
+
+<section class="message-view">
+    <% messages.forEach(message => { %> 
+        <%- include('../components/message', { message }) %>
+    <% }) %>
+</section>
