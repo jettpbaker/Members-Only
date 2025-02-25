@@ -32,3 +32,23 @@
     font-style: italic;
     color: rgba(128, 128, 128, 0.6);
 }
+
+.delete-message {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.delete-message svg {
+    fill: rgba(128, 128, 128, 0.7);
+    width: 1rem;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.delete-message svg:hover {
+    fill: #c294dce2;
+    width: 1rem;
+    height: auto;
+}
