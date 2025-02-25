@@ -1,0 +1,31 @@
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/plugin/relativeTime.min.js"></script>
+<script>dayjs().format()</script>
+
+<link rel="stylesheet" href="/css/message.css">
+<section class="message">
+    <div class="message-header">
+        <h3><%= message.username %></h3>
+        <p class="timestamp" data-timestamp="<%= message.posted %>"></p>
+    </div>
+    <p><%= message.message %></p>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        dayjs.extend(window.dayjs_plugin_relativeTime)
+
+        const timestampElements = document.querySelectorAll('.timestamp')
+        timestampElements.forEach(element => {
+            const timestamp = element.getAttribute('data-timestamp')
+            let text = dayjs(timestamp).fromNow()
+            
+            // Check if the first character is a letter and capitalize if needed
+            if (/^[a-zA-Z]/.test(text)) {
+                text = text.charAt(0).toUpperCase() + text.slice(1)
+            }
+        
+            element.textContent = text
+        })
+    })
+</script>

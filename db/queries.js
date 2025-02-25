@@ -24,3 +24,12 @@ export const createMessage = async (userId, message) => {
   return db.query('INSERT INTO messages (user_id, message) VALUES ($1, $2)', [userId, message])
 }
 
+export const getMessages = async () => {
+  const result = await db.query(`
+    SELECT messages.*, users.username 
+    FROM messages 
+    JOIN users ON messages.user_id = users.id 
+    ORDER BY messages.posted DESC
+  `)
+  return result.rows
+} 
