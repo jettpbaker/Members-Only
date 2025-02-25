@@ -9,6 +9,8 @@ export const logout = (req, res, next) => {
 }
 
 export const getLogout = (req, res) => {
-    const isAuthenticated = req.isAuthenticated()
-    res.render('logout', {isAuthenticated})
+    res.render('logout', {
+        isAuthenticated: req.isAuthenticated(),
+        isMember: req.user.member ?? false
+    })
 }

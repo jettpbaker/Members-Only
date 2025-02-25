@@ -1,0 +1,61 @@
+.card {
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #83d6ae;
+    color: #111;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #6bc796;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+a {
+    color: #83d6ae;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #6bc796;
+    text-decoration: underline;
+}
+
+/* Media query for responsive design on smaller screens */
+@media screen and (max-width: 800px) {
+    .card {
+        padding: 1.5rem;
+        margin: 1rem auto;
+        max-width: 100%;
+    }
+    
+    .btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
+    }
+} 

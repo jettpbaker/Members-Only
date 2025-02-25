@@ -1,8 +1,10 @@
 import { setUserAsMember } from '../db/queries.js'
 
 export const getMember = (req, res) => {
-    const isAuthenticated = req.isAuthenticated()
-    res.render('member', {isAuthenticated})
+    res.render('member', {
+        isAuthenticated: req.isAuthenticated(),
+        isMember: req.user.member ?? false
+    })
 }
 
 export const checkPasscode = (req, res, next) => {
@@ -15,7 +17,6 @@ export const checkPasscode = (req, res, next) => {
 }
 
 export const setMember = (req, res) => {
-    console.log(req.user)
     const userId = req.user.id
     setUserAsMember(userId)
     res.redirect('/')

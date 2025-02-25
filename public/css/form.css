@@ -1,0 +1,77 @@
+/* Form Styling for Members-Only site */
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto;
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form h2 {
+    margin-bottom: 1.5rem;
+    color: #83d6ae;
+    text-align: center;
+}
+
+form div {
+    margin-bottom: 1.5rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #ccc;
+}
+
+form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #83d6ae;
+    box-shadow: 0 0 0 2px rgba(131, 214, 174, 0.3);
+}
+
+form button {
+    background-color: #83d6ae;
+    color: #111;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background-color: #6bc796;
+}
+
+/* Page specific headings */
+main h1, main h2 {
+    margin: 1rem 0;
+    color: #83d6ae;
+    text-align: center;
+}
+
+/* Media query for responsive design on smaller screens */
+@media screen and (max-width: 800px) {
+    form {
+        padding: 1.5rem;
+        margin: 1rem auto;
+        max-width: 100%;
+    }
+} 
