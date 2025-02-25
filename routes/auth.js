@@ -14,4 +14,4 @@ router.post('/login', postLogin)
 router.get('/logout', getLogout)
 router.post('/logout', logout)
 
-export default router 
+export default router

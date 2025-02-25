@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protected Route</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Protected Route</h1>
-    <p>This is a protected route</p>
-    <a href="/logout">Log out</a>
+    <%- include('layout/header') %>
+    <main class="content-container">
+        <h1>Protected Route</h1>
+        <p>This is a protected route</p>
+        <a href="/auth/logout">Log out</a>
+    </main>
 </body>
 </html>

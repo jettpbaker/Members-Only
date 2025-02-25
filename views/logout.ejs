@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logout</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Log out:</h1>
-    <form action="/logout" method="POST">
-        <button type="submit">Log out</button>
-    </form>
+    <%- include('layout/header') %>
+    <main class="content-container">
+        <h1>Log out:</h1>
+        <form action="/auth/logout" method="POST">
+            <button type="submit">Log out</button>
+        </form>
+    </main>
 </body>
 </html>

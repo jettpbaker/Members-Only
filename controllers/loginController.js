@@ -5,8 +5,10 @@ export const getLogin = (req, res) => {
 } 
 
 export const postLogin = (req, res, next) => {
+    const isAuthenticated = req.isAuthenticated()
     passport.authenticate('local', {
         successRedirect: '/',
         failureRedirect: '/login',
+        isAuthenticated
       })(req, res, next)
 } 

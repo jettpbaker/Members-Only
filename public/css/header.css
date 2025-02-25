@@ -1,0 +1,27 @@
+header {
+    background: #181818;
+    width: 100%;    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-section-right {
+    display: flex;
+    gap: 2rem;
+}
+
+hr {
+    margin-top: 1rem;
+    color: #83d6ae83;
+}

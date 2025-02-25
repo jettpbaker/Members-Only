@@ -1,7 +1,8 @@
 import { setUserAsMember } from '../db/queries.js'
 
 export const getMember = (req, res) => {
-    res.render('member')
+    const isAuthenticated = req.isAuthenticated()
+    res.render('member', {isAuthenticated})
 }
 
 export const checkPasscode = (req, res, next) => {
