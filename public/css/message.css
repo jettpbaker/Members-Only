@@ -48,8 +48,6 @@
     width: 1rem;
     height: auto;
     margin-top: 1rem;
-
-    transition: fill ease 0.3s;
 }
 
 .delete-message svg:hover {

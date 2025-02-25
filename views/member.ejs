@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Member</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/elements.css">
 </head>
 <body>
     <%- include('layout/header') %>
     <main class="content-container">
         <h1>So you want to become a member?</h1>
         <form action="/member" method="POST">
-            <label for="passcode">Enter the passcode:</label>
-            <input type="text" name="passcode" id="passcode">
-            <button type="submit">Submit</button>
+            <div>
+                <label for="passcode">Enter the passcode:</label>
+                <input type="text" name="passcode" id="passcode" required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
         </form>
     </main>
 </body>

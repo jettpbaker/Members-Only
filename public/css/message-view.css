@@ -3,12 +3,6 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    width: 100%;
-}
 
-/* Media query for desktop screens */
-@media screen and (min-width: 768px) {
-    .message-view {
-        width: 100%; /* Will inherit container width which is 70% on desktop */
-    }
+    width: 100%;
 }

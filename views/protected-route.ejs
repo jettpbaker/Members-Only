@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protected Route</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/elements.css">
 </head>
 <body>
     <%- include('layout/header') %>
     <main class="content-container">
         <h1>Protected Route</h1>
-        <p>This is a protected route</p>
-        <a href="/auth/logout">Log out</a>
+        <div class="card text-center">
+            <p>This is a protected route</p>
+            <a href="/auth/logout" class="btn">Log out</a>
+        </div>
     </main>
 </body>
 </html>
